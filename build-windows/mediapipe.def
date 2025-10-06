@@ -1,0 +1,14 @@
+EXPORTS
+	face_landmarker_create
+	face_landmarker_close
+	face_landmarker_close_result
+	face_landmarker_create
+	face_landmarker_detect_async
+	face_landmarker_detect_for_video
+	face_landmarker_detect_image
+	pose_landmarker_close
+	pose_landmarker_close_result
+	pose_landmarker_create
+	pose_landmarker_detect_async
+	pose_landmarker_detect_for_video
+	pose_landmarker_detect_image

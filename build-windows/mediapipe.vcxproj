@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\stb\stb_image.c" />
+    <ClCompile Include="..\..\stb\stb_image_write.c" />
+    <ClCompile Include="..\..\zlib\adler32.c" />
+    <ClCompile Include="..\..\zlib\contrib\minizip\ioapi.c" />
+    <ClCompile Include="..\..\zlib\contrib\minizip\unzip.c" />
+    <ClCompile Include="..\..\zlib\crc32.c" />
+    <ClCompile Include="..\..\zlib\inffast.c" />
+    <ClCompile Include="..\..\zlib\inflate.c" />
+    <ClCompile Include="..\..\zlib\inftrees.c" />
+    <ClCompile Include="..\..\zlib\zutil.c" />
+    <ClCompile Include="..\mediapipe\calculators\core\begin_loop_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\clip_vector_size_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\concatenate_vector_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\constant_side_packet_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\end_loop_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\gate_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\get_vector_item_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\pass_through_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\previous_loopback_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\side_packet_to_stream_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\split_proto_list_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\core\split_vector_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\image\image_clone_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\image\image_properties_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\image_to_tensor_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\image_to_tensor_converter_opencv.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\image_to_tensor_utils.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_calculator_cpu.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_calculator_utils.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_calculator_xnnpack.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_feedback_manager.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_interpreter_delegate_runner.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_io_mapper.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\landmarks_to_tensor_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensors_to_classification_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensors_to_detections_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensors_to_floats_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensors_to_landmarks_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensor_span.cc" />
+    <ClCompile Include="..\mediapipe\calculators\tflite\ssd_anchors_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\alignment_points_to_rects_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\association_norm_rect_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\collection_has_min_size_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\detections_to_rects_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\detection_letterbox_removal_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\detection_projection_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\detection_transformation_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\landmarks_smoothing_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\landmarks_smoothing_calculator_utils.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\landmarks_to_detection_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\landmark_letterbox_removal_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\landmark_projection_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\non_max_suppression_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\rect_transformation_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\refine_landmarks_from_heatmap_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\thresholding_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\visibility_copy_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\visibility_smoothing_calculator.cc" />
+    <ClCompile Include="..\mediapipe\calculators\util\world_landmark_projection_calculator.cc" />
+    <ClCompile Include="..\mediapipe\framework\api2\node.cc" />
+    <ClCompile Include="..\mediapipe\framework\api2\packet.cc" />
+    <ClCompile Include="..\mediapipe\framework\api2\stream\smoothing.cc" />
+    <ClCompile Include="..\mediapipe\framework\calculator_base.cc" />
+    <ClCompile Include="..\mediapipe\framework\calculator_context.cc" />
+    <ClCompile Include="..\mediapipe\framework\calculator_context_manager.cc" />
+    <ClCompile Include="..\mediapipe\framework\calculator_contract.cc" />
+    <ClCompile Include="..\mediapipe\framework\calculator_graph.cc" />
+    <ClCompile Include="..\mediapipe\framework\calculator_node.cc" />
+    <ClCompile Include="..\mediapipe\framework\calculator_state.cc" />
+    <ClCompile Include="..\mediapipe\framework\collection_item_id.cc" />
+    <ClCompile Include="..\mediapipe\framework\counter_factory.cc" />
+    <ClCompile Include="..\mediapipe\framework\delegating_executor.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\clock.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\file_helpers.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\file_path.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\mlock_helpers.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\monotonic_clock.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\platform_strings.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\registration.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\registration_token.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\ret_check.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\status.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\status_builder.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\threadpool_std_thread_impl.cc" />
+    <ClCompile Include="..\mediapipe\framework\deps\topologicalsorter.cc" />
+    <ClCompile Include="..\mediapipe\framework\executor.cc" />
+    <ClCompile Include="..\mediapipe\framework\formats\image.cc" />
+    <ClCompile Include="..\mediapipe\framework\formats\image_frame.cc" />
+    <ClCompile Include="..\mediapipe\framework\formats\image_opencv.cc" />
+    <ClCompile Include="..\mediapipe\framework\formats\location.cc" />
+    <ClCompile Include="..\mediapipe\framework\formats\matrix.cc" />
+    <ClCompile Include="..\mediapipe\framework\formats\tensor.cc" />
+    <ClCompile Include="..\mediapipe\framework\formats\tensor_ahwb.cc" />
+    <ClCompile Include="..\mediapipe\framework\graph_output_stream.cc" />
+    <ClCompile Include="..\mediapipe\framework\graph_service_manager.cc" />
+    <ClCompile Include="..\mediapipe\framework\input_side_packet_handler.cc" />
+    <ClCompile Include="..\mediapipe\framework\input_stream_handler.cc" />
+    <ClCompile Include="..\mediapipe\framework\input_stream_manager.cc" />
+    <ClCompile Include="..\mediapipe\framework\input_stream_shard.cc" />
+    <ClCompile Include="..\mediapipe\framework\legacy_calculator_support.cc" />
+    <ClCompile Include="..\mediapipe\framework\output_side_packet_impl.cc" />
+    <ClCompile Include="..\mediapipe\framework\output_stream_handler.cc" />
+    <ClCompile Include="..\mediapipe\framework\output_stream_manager.cc" />
+    <ClCompile Include="..\mediapipe\framework\output_stream_shard.cc" />
+    <ClCompile Include="..\mediapipe\framework\packet.cc" />
+    <ClCompile Include="..\mediapipe\framework\packet_generator_graph.cc" />
+    <ClCompile Include="..\mediapipe\framework\packet_type.cc" />
+    <ClCompile Include="..\mediapipe\framework\resources.cc" />
+    <ClCompile Include="..\mediapipe\framework\scheduler.cc" />
+    <ClCompile Include="..\mediapipe\framework\scheduler_queue.cc" />
+    <ClCompile Include="..\mediapipe\framework\stream_handler\default_input_stream_handler.cc" />
+    <ClCompile Include="..\mediapipe\framework\stream_handler\immediate_input_stream_handler.cc" />
+    <ClCompile Include="..\mediapipe\framework\stream_handler\in_order_output_stream_handler.cc" />
+    <ClCompile Include="..\mediapipe\framework\subgraph.cc" />
+    <ClCompile Include="..\mediapipe\framework\thread_pool_executor.cc" />
+    <ClCompile Include="..\mediapipe\framework\timestamp.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\fill_packet_set.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\graph_runtime_info_logger.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\graph_runtime_info_utils.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\name_util.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\options_field_util.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\options_map.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\options_registry.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\options_syntax_util.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\options_util.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\proto_util_lite.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\sink.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\status_util.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\subgraph_expansion.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\tag_map.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\tag_map_helper.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\template_expander.cc" />
+    <ClCompile Include="..\mediapipe\framework\tool\validate_name.cc" />
+    <ClCompile Include="..\mediapipe\framework\validated_graph_config.cc" />
+    <ClCompile Include="..\mediapipe\framework\vlog_overrides.cc" />
+    <ClCompile Include="..\mediapipe\framework\vlog_utils.cc" />
+    <ClCompile Include="..\mediapipe\gpu\gpu_buffer.cc" />
+    <ClCompile Include="..\mediapipe\gpu\gpu_buffer_format.cc" />
+    <ClCompile Include="..\mediapipe\gpu\gpu_buffer_storage.cc" />
+    <ClCompile Include="..\mediapipe\gpu\gpu_buffer_storage_image_frame.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\common.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\components\containers\category.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\components\containers\classification_result.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\components\containers\landmark.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\components\processors\image_preprocessing_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\base_options.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\external_file_handler.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\mediapipe_builtin_op_resolver.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_asset_bundle_resources.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_resources.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_resources_cache.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_resources_calculator.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_task_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\task_runner.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\core\utils.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\metadata\metadata_extractor.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\metadata\metadata_version_utils.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\metadata\utils\zip_readonly_mem_file.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\metadata\utils\zip_utils.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_detector\face_detector_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\calculators\env_generator_calculator.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\calculators\geometry_pipeline_calculator.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\face_geometry_from_landmarks_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\libs\geometry_pipeline.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\libs\mesh_3d_utils.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\libs\procrustes_solver.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\libs\validation_utils.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_blendshapes_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_landmarker.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_landmarker_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_landmarker_result.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_landmarks_detector_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\tensors_to_face_landmarks_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_detector\pose_detector_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_landmarker\pose_landmarker.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_landmarker\pose_landmarker_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_landmarker\pose_landmarker_result.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_landmarker\pose_landmarks_detector_graph.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\utils\image_tensor_specs.cc" />
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\utils\image_utils.cc" />
+    <ClCompile Include="..\mediapipe\tasks\c\components\containers\category_converter.cc" />
+    <ClCompile Include="..\mediapipe\tasks\c\components\containers\landmark_converter.cc" />
+    <ClCompile Include="..\mediapipe\tasks\c\components\containers\matrix_converter.cc" />
+    <ClCompile Include="..\mediapipe\tasks\c\core\base_options_converter.cc" />
+    <ClCompile Include="..\mediapipe\tasks\c\vision\face_landmarker\face_landmarker.cc" />
+    <ClCompile Include="..\mediapipe\tasks\c\vision\face_landmarker\face_landmarker_result_converter.cc" />
+    <ClCompile Include="..\mediapipe\tasks\c\vision\pose_landmarker\pose_landmarker.cc" />
+    <ClCompile Include="..\mediapipe\tasks\c\vision\pose_landmarker\pose_landmarker_result_converter.cc" />
+    <ClCompile Include="..\mediapipe\util\cpu_util.cc" />
+    <ClCompile Include="..\mediapipe\util\filtering\low_pass_filter.cc" />
+    <ClCompile Include="..\mediapipe\util\filtering\one_euro_filter.cc" />
+    <ClCompile Include="..\mediapipe\util\filtering\relative_velocity_filter.cc" />
+    <ClCompile Include="..\mediapipe\util\graph_builder_utils.cc" />
+    <ClCompile Include="..\mediapipe\util\header_util.cc" />
+    <ClCompile Include="..\mediapipe\util\label_map_util.cc" />
+    <ClCompile Include="..\mediapipe\util\rectangle_util.cc" />
+    <ClCompile Include="..\mediapipe\util\resource_util.cc" />
+    <ClCompile Include="..\mediapipe\util\resource_util_windows.cc" />
+    <ClCompile Include="..\mediapipe\util\str_util.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\error_reporter.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\operations\landmarks_to_transform_matrix.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\operations\max_pool_argmax.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\operations\max_unpooling.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\operations\transform_landmarks.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\operations\transform_tensor_bilinear.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\operations\transpose_conv_bias.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\tflite_model_loader.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\tflite_signature_reader.cc" />
+    <ClCompile Include="..\mediapipe\util\tflite\utils.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\clip_vector_size_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\concatenate_vector_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\constant_side_packet_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\flow_limiter_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\gate_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\get_vector_item_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\split_vector_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\image\image_clone_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\image\warp_affine_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\internal\callback_packet_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\image_to_tensor_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\inference_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\landmarks_to_tensor_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_classification_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_detections_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_floats_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_landmarks_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_segmentation_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tflite\ssd_anchors_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\association_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\collection_has_min_size_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\detections_to_rects_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\landmarks_refinement_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\landmarks_smoothing_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\landmarks_to_detection_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\landmark_projection_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\non_max_suppression_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\rect_transformation_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\refine_landmarks_from_heatmap_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\thresholding_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\visibility_copy_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\visibility_smoothing_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\calculator_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\deps\proto_descriptor.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\annotation\locus.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\annotation\rasterization.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\body_rig.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\classification.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\detection.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\image_format.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\landmark.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\location_data.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\matrix_data.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\object_detection\anchor.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\rect.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\time_series_header.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\graph_runtime_info.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\mediapipe_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\packet_factory.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\packet_generator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\status_handler.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\stream_handler.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\stream_handler\default_input_stream_handler.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\thread_pool_executor.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\tool\calculator_graph_template.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\tool\field_data.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\tool\packet_generator_wrapper_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\gpu\gpu_origin.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\components\containers\proto\classifications.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\components\processors\proto\image_preprocessing_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\acceleration.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\base_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\external_file.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\inference_subgraph.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\model_resources_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_detector\proto\face_detector_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\calculators\env_generator_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\calculators\geometry_pipeline_calculator.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\environment.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\face_geometry.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\face_geometry_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\geometry_pipeline_metadata.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\mesh_3d.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_landmarker\proto\face_blendshapes_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_landmarker\proto\face_landmarker_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_landmarker\proto\face_landmarks_detector_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_landmarker\proto\tensors_to_face_landmarks_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\pose_detector\proto\pose_detector_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\pose_landmarker\proto\pose_landmarker_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\pose_landmarker\proto\pose_landmarks_detector_graph_options.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\util\color.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\util\label_map.pb.cc" />
+    <ClCompile Include="..\proto-cpp-out\mediapipe\util\render_data.pb.cc" />
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mediapipe.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\abseil-cpp\build-windows\abseil-cpp.vcxproj">
+      <Project>{4f102c06-c8c2-4a2e-814e-b624735295bd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\flatbuffers\build-windows\flatbuffers.vcxproj">
+      <Project>{d50034c0-2601-4256-8306-35782f4e22c0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\glog\build-windows\glog.vcxproj">
+      <Project>{679bab8e-c78e-49c2-bd46-cdd099679834}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenCV\build-windows\opencv.vcxproj">
+      <Project>{20af1bfb-9677-455b-bdf7-7cb9f1a96cf0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\protobuf\build-windows\libprotobuf.vcxproj">
+      <Project>{4ba84065-90cd-435b-a54b-f12a9c725c3d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\tensorflow\build-windows\tensorflow-lite.vcxproj">
+      <Project>{093ede03-0bb8-4e6e-a69f-03a6f302d6d9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XNNPACK\build-windows\XNNPACK.vcxproj">
+      <Project>{c36bb7a0-0120-4ee8-9cad-76af96a4e5de}</Project>
+    </ProjectReference>
+    <ProjectReference Include="mediapipe-flat.vcxproj">
+      <Project>{7e72554c-d6e0-4e56-8d20-621c36b0495f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="mediapipe-proto.vcxproj">
+      <Project>{138d728e-fd05-4582-8fc7-2485184d7020}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{38e5e7c5-b3e9-47cb-9145-b29c2764f865}</ProjectGuid>
+    <RootNamespace>mediapipe</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>MEDIAPIPE_DISABLE_GPU=1;MEDIAPIPE_FORCE_CPU_INFERENCE=1;CL_DELEGATE_NO_GL=1;TFLITE_KERNEL_USE_XNNPACK=1;TFLITE_MMAP_DISABLED=1;TFL_STATIC_LIBRARY_BUILD=1;EIGEN_NEON_GEBP_NR=4;EIGEN_MPL2_ONLY=1;XNN_ENABLE_ARM_FP16_VECTOR=0;XNN_ENABLE_ARM_FP16_SCALAR=0;XNN_ENABLE_ARM_BF16=0;XNN_ENABLE_ARM_DOTPROD=0;XNN_ENABLE_ARM_I8MM=0;XNN_ENABLE_RISCV_VECTOR=1;XNN_ENABLE_AVXVNNI=1;XNN_ENABLE_AVXVNNIINT8=1;XNN_ENABLE_AVX256SKX=1;XNN_ENABLE_AVX256VNNI=1;XNN_ENABLE_AVX256VNNIGFNI=1;XNN_ENABLE_AVX512VNNIGFNI=1;XNN_ENABLE_AVX512AMX=1;XNN_ENABLE_AVX512FP16=1;XNN_ENABLE_VSX=1;XNN_ENABLE_ASSEMBLY=1;XNN_ENABLE_MEMOPT=1;XNN_ENABLE_SPARSE=1;XNN_ENABLE_GEMM_M_SPECIALIZATION=1;XNN_ENABLE_DWCONV_MULTIPASS=0;XNN_ENABLE_HVX=1;XNN_ENABLE_KLEIDIAI=0;XNN_ENABLE_CPUINFO=1;XNN_LOG_LEVEL=4;FXDIV_USE_INLINE_ASSEMBLY=0;PTHREADPOOL_NO_DEPRECATED_API=1;CPUINFO_SUPPORTED_PLATFORM=1;CPUINFO_LOG_TO_STDIO=1;CPUINFO_LOG_LEVEL=2;GOOGLE_PROTOBUF_CMAKE_BUILD=1;FLATBUFFERS_LOCALE_INDEPENDENT=1;GLOG_USE_GLOG_EXPORT=1;GLOG_USE_WINDOWS_PORT=1;GLOG_NO_ABBREVIATED_SEVERITIES=1;GLOG_NO_SYMBOLIZE_DETECTION=1;Z_SOLO=1;_WIN32_WINNT=0x0601;NOMINMAX=1;WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS=1;_USE_MATH_DEFINES=1;_WINDOWS;_USRDLL;_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..;$(ProjectDir)\..\proto-cpp-out;$(ProjectDir)\..\flat-cpp-out;$(ProjectDir)\..\..\abseil-cpp;$(ProjectDir)\..\..\protobuf\src;$(ProjectDir)\..\..\flatbuffers\include;$(ProjectDir)\..\..\tensorflow;$(ProjectDir)\..\..\eigen;$(ProjectDir)\..\..\glog\src;$(ProjectDir)\..\..\stb;$(ProjectDir)\..\..\gemmlowp;$(ProjectDir)\..\..\FP16\include;$(ProjectDir)\..\..\zlib;$(ProjectDir)\..\..\OpenCV\modules\core\include;$(ProjectDir)\..\..\OpenCV\modules\imgproc\include;$(ProjectDir)\..\..\OpenCV\modules\imgcodecs\include;$(ProjectDir)\..\..\OpenCV\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</ObjectFileName>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <AssemblerListingLocation>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</AssemblerListingLocation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>mediapipe.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>MEDIAPIPE_DISABLE_GPU=1;MEDIAPIPE_FORCE_CPU_INFERENCE=1;CL_DELEGATE_NO_GL=1;TFLITE_KERNEL_USE_XNNPACK=1;TFLITE_MMAP_DISABLED=1;TFL_STATIC_LIBRARY_BUILD=1;EIGEN_NEON_GEBP_NR=4;EIGEN_MPL2_ONLY=1;XNN_ENABLE_ARM_FP16_VECTOR=0;XNN_ENABLE_ARM_FP16_SCALAR=0;XNN_ENABLE_ARM_BF16=0;XNN_ENABLE_ARM_DOTPROD=0;XNN_ENABLE_ARM_I8MM=0;XNN_ENABLE_RISCV_VECTOR=1;XNN_ENABLE_AVXVNNI=1;XNN_ENABLE_AVXVNNIINT8=1;XNN_ENABLE_AVX256SKX=1;XNN_ENABLE_AVX256VNNI=1;XNN_ENABLE_AVX256VNNIGFNI=1;XNN_ENABLE_AVX512VNNIGFNI=1;XNN_ENABLE_AVX512AMX=1;XNN_ENABLE_AVX512FP16=1;XNN_ENABLE_VSX=1;XNN_ENABLE_ASSEMBLY=1;XNN_ENABLE_MEMOPT=1;XNN_ENABLE_SPARSE=1;XNN_ENABLE_GEMM_M_SPECIALIZATION=1;XNN_ENABLE_DWCONV_MULTIPASS=0;XNN_ENABLE_HVX=1;XNN_ENABLE_KLEIDIAI=0;XNN_ENABLE_CPUINFO=1;XNN_LOG_LEVEL=4;FXDIV_USE_INLINE_ASSEMBLY=0;PTHREADPOOL_NO_DEPRECATED_API=1;CPUINFO_SUPPORTED_PLATFORM=1;CPUINFO_LOG_TO_STDIO=1;CPUINFO_LOG_LEVEL=2;GOOGLE_PROTOBUF_CMAKE_BUILD=1;FLATBUFFERS_LOCALE_INDEPENDENT=1;GLOG_USE_GLOG_EXPORT=1;GLOG_USE_WINDOWS_PORT=1;GLOG_NO_ABBREVIATED_SEVERITIES=1;GLOG_NO_SYMBOLIZE_DETECTION=1;Z_SOLO=1;_WIN32_WINNT=0x0601;NOMINMAX=1;WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS=1;_USE_MATH_DEFINES=1;_WINDOWS;_USRDLL;NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..;$(ProjectDir)\..\proto-cpp-out;$(ProjectDir)\..\flat-cpp-out;$(ProjectDir)\..\..\abseil-cpp;$(ProjectDir)\..\..\protobuf\src;$(ProjectDir)\..\..\flatbuffers\include;$(ProjectDir)\..\..\tensorflow;$(ProjectDir)\..\..\eigen;$(ProjectDir)\..\..\glog\src;$(ProjectDir)\..\..\stb;$(ProjectDir)\..\..\gemmlowp;$(ProjectDir)\..\..\FP16\include;$(ProjectDir)\..\..\zlib;$(ProjectDir)\..\..\OpenCV\modules\core\include;$(ProjectDir)\..\..\OpenCV\modules\imgproc\include;$(ProjectDir)\..\..\OpenCV\modules\imgcodecs\include;$(ProjectDir)\..\..\OpenCV\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</ObjectFileName>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <AssemblerListingLocation>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</AssemblerListingLocation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>mediapipe.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>MEDIAPIPE_DISABLE_GPU=1;MEDIAPIPE_FORCE_CPU_INFERENCE=1;CL_DELEGATE_NO_GL=1;TFLITE_KERNEL_USE_XNNPACK=1;TFLITE_MMAP_DISABLED=1;TFL_STATIC_LIBRARY_BUILD=1;EIGEN_NEON_GEBP_NR=4;EIGEN_MPL2_ONLY=1;XNN_ENABLE_ARM_FP16_VECTOR=0;XNN_ENABLE_ARM_FP16_SCALAR=0;XNN_ENABLE_ARM_BF16=0;XNN_ENABLE_ARM_DOTPROD=0;XNN_ENABLE_ARM_I8MM=0;XNN_ENABLE_RISCV_VECTOR=1;XNN_ENABLE_AVXVNNI=1;XNN_ENABLE_AVXVNNIINT8=1;XNN_ENABLE_AVX256SKX=1;XNN_ENABLE_AVX256VNNI=1;XNN_ENABLE_AVX256VNNIGFNI=1;XNN_ENABLE_AVX512VNNIGFNI=1;XNN_ENABLE_AVX512AMX=1;XNN_ENABLE_AVX512FP16=1;XNN_ENABLE_VSX=1;XNN_ENABLE_ASSEMBLY=1;XNN_ENABLE_MEMOPT=1;XNN_ENABLE_SPARSE=1;XNN_ENABLE_GEMM_M_SPECIALIZATION=1;XNN_ENABLE_DWCONV_MULTIPASS=0;XNN_ENABLE_HVX=1;XNN_ENABLE_KLEIDIAI=0;XNN_ENABLE_CPUINFO=1;XNN_LOG_LEVEL=4;FXDIV_USE_INLINE_ASSEMBLY=0;PTHREADPOOL_NO_DEPRECATED_API=1;CPUINFO_SUPPORTED_PLATFORM=1;CPUINFO_LOG_TO_STDIO=1;CPUINFO_LOG_LEVEL=2;GOOGLE_PROTOBUF_CMAKE_BUILD=1;FLATBUFFERS_LOCALE_INDEPENDENT=1;GLOG_USE_GLOG_EXPORT=1;GLOG_USE_WINDOWS_PORT=1;GLOG_NO_ABBREVIATED_SEVERITIES=1;GLOG_NO_SYMBOLIZE_DETECTION=1;Z_SOLO=1;_WIN32_WINNT=0x0601;NOMINMAX=1;WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS=1;_USE_MATH_DEFINES=1;_WINDOWS;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..;$(ProjectDir)\..\proto-cpp-out;$(ProjectDir)\..\flat-cpp-out;$(ProjectDir)\..\..\abseil-cpp;$(ProjectDir)\..\..\protobuf\src;$(ProjectDir)\..\..\flatbuffers\include;$(ProjectDir)\..\..\tensorflow;$(ProjectDir)\..\..\eigen;$(ProjectDir)\..\..\glog\src;$(ProjectDir)\..\..\stb;$(ProjectDir)\..\..\gemmlowp;$(ProjectDir)\..\..\FP16\include;$(ProjectDir)\..\..\zlib;$(ProjectDir)\..\..\OpenCV\modules\core\include;$(ProjectDir)\..\..\OpenCV\modules\imgproc\include;$(ProjectDir)\..\..\OpenCV\modules\imgcodecs\include;$(ProjectDir)\..\..\OpenCV\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</ObjectFileName>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <AssemblerListingLocation>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</AssemblerListingLocation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>mediapipe.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>MEDIAPIPE_DISABLE_GPU=1;MEDIAPIPE_FORCE_CPU_INFERENCE=1;CL_DELEGATE_NO_GL=1;TFLITE_KERNEL_USE_XNNPACK=1;TFLITE_MMAP_DISABLED=1;TFL_STATIC_LIBRARY_BUILD=1;EIGEN_NEON_GEBP_NR=4;EIGEN_MPL2_ONLY=1;XNN_ENABLE_ARM_FP16_VECTOR=0;XNN_ENABLE_ARM_FP16_SCALAR=0;XNN_ENABLE_ARM_BF16=0;XNN_ENABLE_ARM_DOTPROD=0;XNN_ENABLE_ARM_I8MM=0;XNN_ENABLE_RISCV_VECTOR=1;XNN_ENABLE_AVXVNNI=1;XNN_ENABLE_AVXVNNIINT8=1;XNN_ENABLE_AVX256SKX=1;XNN_ENABLE_AVX256VNNI=1;XNN_ENABLE_AVX256VNNIGFNI=1;XNN_ENABLE_AVX512VNNIGFNI=1;XNN_ENABLE_AVX512AMX=1;XNN_ENABLE_AVX512FP16=1;XNN_ENABLE_VSX=1;XNN_ENABLE_ASSEMBLY=1;XNN_ENABLE_MEMOPT=1;XNN_ENABLE_SPARSE=1;XNN_ENABLE_GEMM_M_SPECIALIZATION=1;XNN_ENABLE_DWCONV_MULTIPASS=0;XNN_ENABLE_HVX=1;XNN_ENABLE_KLEIDIAI=0;XNN_ENABLE_CPUINFO=1;XNN_LOG_LEVEL=4;FXDIV_USE_INLINE_ASSEMBLY=0;PTHREADPOOL_NO_DEPRECATED_API=1;CPUINFO_SUPPORTED_PLATFORM=1;CPUINFO_LOG_TO_STDIO=1;CPUINFO_LOG_LEVEL=2;GOOGLE_PROTOBUF_CMAKE_BUILD=1;FLATBUFFERS_LOCALE_INDEPENDENT=1;GLOG_USE_GLOG_EXPORT=1;GLOG_USE_WINDOWS_PORT=1;GLOG_NO_ABBREVIATED_SEVERITIES=1;GLOG_NO_SYMBOLIZE_DETECTION=1;Z_SOLO=1;_WIN32_WINNT=0x0601;NOMINMAX=1;WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS=1;_USE_MATH_DEFINES=1;_WINDOWS;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..;$(ProjectDir)\..\proto-cpp-out;$(ProjectDir)\..\flat-cpp-out;$(ProjectDir)\..\..\abseil-cpp;$(ProjectDir)\..\..\protobuf\src;$(ProjectDir)\..\..\flatbuffers\include;$(ProjectDir)\..\..\tensorflow;$(ProjectDir)\..\..\eigen;$(ProjectDir)\..\..\glog\src;$(ProjectDir)\..\..\stb;$(ProjectDir)\..\..\gemmlowp;$(ProjectDir)\..\..\FP16\include;$(ProjectDir)\..\..\zlib;$(ProjectDir)\..\..\OpenCV\modules\core\include;$(ProjectDir)\..\..\OpenCV\modules\imgproc\include;$(ProjectDir)\..\..\OpenCV\modules\imgcodecs\include;$(ProjectDir)\..\..\OpenCV\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</ObjectFileName>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <AssemblerListingLocation>$(IntDir)\$(ProjectName)\$(ProjectName)\%(RelativeDir)\</AssemblerListingLocation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>mediapipe.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

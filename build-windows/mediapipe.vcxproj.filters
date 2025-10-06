@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="build-windows">
+      <UniqueIdentifier>{abe51996-478c-4bca-bb9a-0aa74bb25114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="proto-cpp-out">
+      <UniqueIdentifier>{dee39ba2-6cd1-4155-a2ad-af59ac5b7238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party">
+      <UniqueIdentifier>{e62b54ae-372c-416b-827b-6e995789483e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\stb">
+      <UniqueIdentifier>{f9e70637-d085-4922-bb8b-851992cf6089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4cc12320-708c-412a-937a-8461c36791fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\framework">
+      <UniqueIdentifier>{2cdce779-eec8-431b-b392-a53772389624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\framework\tool">
+      <UniqueIdentifier>{aa33347d-3c94-4222-bb0f-6907bb4e5d38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\framework\deps">
+      <UniqueIdentifier>{42722a04-d363-456e-bd2b-ec26bc462ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\framework\formats">
+      <UniqueIdentifier>{278d3bf6-edb2-4f2c-bc7f-b85b227b0ccc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gpu">
+      <UniqueIdentifier>{be7cd434-bd38-4b52-8cca-f7bf9a1b1940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks">
+      <UniqueIdentifier>{3f17ae0b-b7a2-4230-a88d-5ec2f5cd028a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\c">
+      <UniqueIdentifier>{9a1429ca-8e36-4841-87c2-fda77b41f9b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\c\vision">
+      <UniqueIdentifier>{082f2606-d584-49da-bf90-cae7e2d66fbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\c\vision\face_landmarker">
+      <UniqueIdentifier>{c3f0c7b0-2a4b-4064-92a8-5de500e4361a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\c\vision\pose_landmarker">
+      <UniqueIdentifier>{9ce773d4-fc57-414e-9a35-fb1a98869827}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\c\core">
+      <UniqueIdentifier>{6beced11-8f15-48b5-b431-7928efeca3cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\c\components">
+      <UniqueIdentifier>{1ac1381e-02a8-4ad6-be90-e268730e398f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\c\components\containers">
+      <UniqueIdentifier>{ade49f12-a653-4859-9e36-ab5370509774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc">
+      <UniqueIdentifier>{9ee338b5-65c0-492b-9f80-158614239b06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision">
+      <UniqueIdentifier>{581723ad-775e-4029-9ce6-b9e4429702c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision\face_landmarker">
+      <UniqueIdentifier>{c6b3afc2-3577-4293-b610-5821e5c42b52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision\utils">
+      <UniqueIdentifier>{8e80d7c2-99ba-4a36-a8f3-7baa8696c878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision\pose_landmarker">
+      <UniqueIdentifier>{69480e9b-5098-4a75-a859-4d9243410023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\core">
+      <UniqueIdentifier>{18c8615c-5a0c-4fee-88d0-86248a9d1d80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\components">
+      <UniqueIdentifier>{446b8aae-1c53-4e84-a74e-b9977e6811cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\components\containers">
+      <UniqueIdentifier>{54e28157-8a82-4bd8-918f-e4b0ff3ab376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\util">
+      <UniqueIdentifier>{77c518c5-c009-4b21-b630-7edff156c178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\util\tflite">
+      <UniqueIdentifier>{a6d37d63-aa4f-4d44-bcd6-e30ac2f1c649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\util\tflite\operations">
+      <UniqueIdentifier>{1008fbc0-7daa-4db3-aafa-11f2f06c1399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\metadata">
+      <UniqueIdentifier>{5124862d-4876-42b5-acde-d66061876aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\metadata\utils">
+      <UniqueIdentifier>{ba5b230b-2440-48ea-9c1b-088261b6d320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\zlib">
+      <UniqueIdentifier>{1d54950b-cfc5-4927-869f-497f093db037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision\face_detector">
+      <UniqueIdentifier>{43c38d24-ddd9-433a-84b0-bfde428fb5f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\components\processors">
+      <UniqueIdentifier>{e4a43fc1-ba0d-4e29-8bcf-4556ebf47bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\calculators">
+      <UniqueIdentifier>{bd20431b-f4d7-41a3-958a-77378a53f5bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\calculators\core">
+      <UniqueIdentifier>{fc17631e-1283-4c8c-8773-22a4c456bcae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\calculators\image">
+      <UniqueIdentifier>{cfd0989e-5b68-4999-8278-eb50ecc508c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\framework\api2">
+      <UniqueIdentifier>{a4f18987-7b3a-41c5-ab50-761b4290e04d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\calculators\util">
+      <UniqueIdentifier>{158bc463-654a-4245-8f44-38e8b6bdcebb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision\face_geometry">
+      <UniqueIdentifier>{c64f1c84-3865-4f50-893d-61f16b7ce05d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\calculators\tensor">
+      <UniqueIdentifier>{a14e8366-a310-4caf-a424-bb2993d7514d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\util\filtering">
+      <UniqueIdentifier>{f882bc8f-2389-43f0-8f4a-82e1c09bf1c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision\face_geometry\calculators">
+      <UniqueIdentifier>{04fbc723-e151-4326-9944-abc488f2852f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision\face_geometry\libs">
+      <UniqueIdentifier>{1e4bf6c5-cf12-4fb6-8a89-da7b51c29ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\framework\stream_handler">
+      <UniqueIdentifier>{f8f27498-4476-45be-9c14-448412c044ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tasks\cc\vision\pose_detector">
+      <UniqueIdentifier>{a7852aee-76d2-4f6e-96db-d6c49ff3bf9e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>build-windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\c\vision\face_landmarker\face_landmarker.cc">
+      <Filter>source\tasks\c\vision\face_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\c\vision\pose_landmarker\pose_landmarker.cc">
+      <Filter>source\tasks\c\vision\pose_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\c\core\base_options_converter.cc">
+      <Filter>source\tasks\c\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_landmarker.cc">
+      <Filter>source\tasks\cc\vision\face_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\image_to_tensor_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\inference_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\calculator_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\deps\proto_descriptor.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\classification.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\image_format.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\landmark.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\matrix_data.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\rect.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\graph_runtime_info.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\mediapipe_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\packet_factory.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\packet_generator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\status_handler.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\stream_handler.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\thread_pool_executor.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\tool\calculator_graph_template.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\gpu\gpu_origin.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\components\containers\proto\classifications.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\acceleration.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\base_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\external_file.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\inference_subgraph.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_detector\proto\face_detector_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\calculators\geometry_pipeline_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\face_geometry.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\face_geometry_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\mesh_3d.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_landmarker\proto\face_blendshapes_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_landmarker\proto\face_landmarker_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_landmarker\proto\face_landmarks_detector_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\base_options.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\common.cc">
+      <Filter>source\tasks\cc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\task_runner.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\utils.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\calculator_graph.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\calculator_node.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\scheduler.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\output_stream_shard.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\output_stream_manager.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\graph_runtime_info_logger.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\vlog_overrides.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\packet_generator_graph.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\status.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\output_side_packet_impl.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\status_builder.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\packet_type.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\input_stream_manager.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\ret_check.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\tag_map.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\status_util.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\cpu_util.cc">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\thread_pool_executor.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\validated_graph_config.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\graph_output_stream.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\packet.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\graph_service_manager.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\fill_packet_set.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\clock.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\counter_factory.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\calculator_state.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\executor.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\delegating_executor.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\name_util.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\output_stream_handler.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\calculator_context_manager.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\input_stream_handler.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\timestamp.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\calculator_context.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\collection_item_id.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\input_side_packet_handler.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\legacy_calculator_support.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\resources.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\input_stream_shard.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\scheduler_queue.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\threadpool_std_thread_impl.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\file_helpers.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\mlock_helpers.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\resource_util_windows.cc">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\resource_util.cc">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\monotonic_clock.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\registration_token.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\registration.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\calculator_contract.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\tool\packet_generator_wrapper_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\tag_map_helper.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\vlog_utils.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\subgraph_expansion.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\topologicalsorter.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\subgraph.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\file_path.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\template_expander.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\deps\platform_strings.cc">
+      <Filter>source\framework\deps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\graph_runtime_info_utils.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\options_util.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\tool\field_data.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\options_map.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\validate_name.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\options_syntax_util.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\options_field_util.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\options_registry.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\proto_util_lite.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\tool\sink.cc">
+      <Filter>source\framework\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\external_file_handler.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\gpu\gpu_buffer_storage.cc">
+      <Filter>source\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\internal\callback_packet_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\calculator_base.cc">
+      <Filter>source\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_resources_cache.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\flow_limiter_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\gpu\gpu_buffer_format.cc">
+      <Filter>source\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_landmarker_result.cc">
+      <Filter>source\tasks\cc\vision\face_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\formats\image_frame.cc">
+      <Filter>source\framework\formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\gpu\gpu_buffer_storage_image_frame.cc">
+      <Filter>source\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\utils\image_utils.cc">
+      <Filter>source\tasks\cc\vision\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\c\vision\face_landmarker\face_landmarker_result_converter.cc">
+      <Filter>source\tasks\c\vision\face_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\mediapipe_builtin_op_resolver.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\operations\max_pool_argmax.cc">
+      <Filter>source\util\tflite\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\operations\max_unpooling.cc">
+      <Filter>source\util\tflite\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\operations\transpose_conv_bias.cc">
+      <Filter>source\util\tflite\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\operations\transform_tensor_bilinear.cc">
+      <Filter>source\util\tflite\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\operations\transform_landmarks.cc">
+      <Filter>source\util\tflite\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\operations\landmarks_to_transform_matrix.cc">
+      <Filter>source\util\tflite\operations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\c\vision\pose_landmarker\pose_landmarker_result_converter.cc">
+      <Filter>source\tasks\c\vision\pose_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_landmarker\pose_landmarker.cc">
+      <Filter>source\tasks\cc\vision\pose_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_landmarker\pose_landmarker_result.cc">
+      <Filter>source\tasks\cc\vision\pose_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\pose_detector\proto\pose_detector_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\pose_landmarker\proto\pose_landmarker_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\pose_landmarker\proto\pose_landmarks_detector_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\components\containers\landmark.cc">
+      <Filter>source\tasks\cc\components\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\components\containers\classification_result.cc">
+      <Filter>source\tasks\cc\components\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\formats\matrix.cc">
+      <Filter>source\framework\formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\components\containers\category.cc">
+      <Filter>source\tasks\cc\components\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\c\components\containers\landmark_converter.cc">
+      <Filter>source\tasks\c\components\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\c\components\containers\category_converter.cc">
+      <Filter>source\tasks\c\components\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\c\components\containers\matrix_converter.cc">
+      <Filter>source\tasks\c\components\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\gpu\gpu_buffer.cc">
+      <Filter>source\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\stb\stb_image_write.c">
+      <Filter>third_party\stb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\stb\stb_image.c">
+      <Filter>third_party\stb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_landmarker_graph.cc">
+      <Filter>source\tasks\cc\vision\face_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\clip_vector_size_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\concatenate_vector_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\gate_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\get_vector_item_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\association_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\collection_has_min_size_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\detection.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\location_data.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\annotation\rasterization.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\environment.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\graph_builder_utils.cc">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_asset_bundle_resources.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\metadata\utils\zip_utils.cc">
+      <Filter>source\tasks\cc\metadata\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\zlib\contrib\minizip\unzip.c">
+      <Filter>third_party\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\zlib\contrib\minizip\ioapi.c">
+      <Filter>third_party\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\zlib\inflate.c">
+      <Filter>third_party\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\zlib\inffast.c">
+      <Filter>third_party\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\zlib\crc32.c">
+      <Filter>third_party\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\zlib\adler32.c">
+      <Filter>third_party\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\zlib\zutil.c">
+      <Filter>third_party\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\zlib\inftrees.c">
+      <Filter>third_party\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\metadata\utils\zip_readonly_mem_file.cc">
+      <Filter>source\tasks\cc\metadata\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_task_graph.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\core\proto\model_resources_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_resources.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\error_reporter.cc">
+      <Filter>source\util\tflite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\metadata\metadata_extractor.cc">
+      <Filter>source\tasks\cc\metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\metadata\metadata_version_utils.cc">
+      <Filter>source\tasks\cc\metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_detector\face_detector_graph.cc">
+      <Filter>source\tasks\cc\vision\face_detector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_detections_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tflite\ssd_anchors_calculator.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\detections_to_rects_calculator.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\non_max_suppression_calculator.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\rect_transformation_calculator.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tflite\ssd_anchors_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\detections_to_rects_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\non_max_suppression_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\rect_transformation_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\object_detection\anchor.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\components\processors\proto\image_preprocessing_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\formats\location.cc">
+      <Filter>source\framework\formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\annotation\locus.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\components\processors\image_preprocessing_graph.cc">
+      <Filter>source\tasks\cc\components\processors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\image\image_clone_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\utils\image_tensor_specs.cc">
+      <Filter>source\tasks\cc\vision\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\clip_vector_size_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_landmarks_detector_graph.cc">
+      <Filter>source\tasks\cc\vision\face_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\split_vector_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_floats_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_landmarks_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\thresholding_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\landmarks_smoothing_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_landmarker\proto\tensors_to_face_landmarks_graph_options.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\image\image_properties_calculator.cc">
+      <Filter>source\calculators\image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\api2\node.cc">
+      <Filter>source\framework\api2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\api2\packet.cc">
+      <Filter>source\framework\api2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\previous_loopback_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\collection_has_min_size_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\gate_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\header_util.cc">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\association_norm_rect_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\rectangle_util.cc">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\face_geometry_from_landmarks_graph.cc">
+      <Filter>source\tasks\cc\vision\face_geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\calculators\env_generator_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\pass_through_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensors_to_detections_calculator.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\formats\tensor.cc">
+      <Filter>source\framework\formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\formats\tensor_ahwb.cc">
+      <Filter>source\framework\formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\detection_projection_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\detection_transformation_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\begin_loop_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\end_loop_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\util\render_data.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\util\color.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\get_vector_item_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\landmarks_smoothing_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\landmarks_smoothing_calculator_utils.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\filtering\one_euro_filter.cc">
+      <Filter>source\util\filtering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\filtering\relative_velocity_filter.cc">
+      <Filter>source\util\filtering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\filtering\low_pass_filter.cc">
+      <Filter>source\util\filtering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\concatenate_vector_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\face_blendshapes_graph.cc">
+      <Filter>source\tasks\cc\vision\face_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_classification_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\landmarks_to_tensor_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\util\label_map.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\calculators\env_generator_calculator.cc">
+      <Filter>source\tasks\cc\vision\face_geometry\calculators</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\tasks\cc\vision\face_geometry\proto\geometry_pipeline_metadata.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\libs\validation_utils.cc">
+      <Filter>source\tasks\cc\vision\face_geometry\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\libs\mesh_3d_utils.cc">
+      <Filter>source\tasks\cc\vision\face_geometry\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\split_proto_list_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\body_rig.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\calculators\geometry_pipeline_calculator.cc">
+      <Filter>source\tasks\cc\vision\face_geometry\calculators</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\libs\geometry_pipeline.cc">
+      <Filter>source\tasks\cc\vision\face_geometry\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_geometry\libs\procrustes_solver.cc">
+      <Filter>source\tasks\cc\vision\face_geometry\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\image_to_tensor_calculator.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\image_to_tensor_utils.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\image\image_clone_calculator.cc">
+      <Filter>source\calculators\image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\formats\image.cc">
+      <Filter>source\framework\formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\core\model_resources_calculator.cc">
+      <Filter>source\tasks\cc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_calculator.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\tflite_model_loader.cc">
+      <Filter>source\util\tflite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_calculator_cpu.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_calculator_xnnpack.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensor_span.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_io_mapper.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_interpreter_delegate_runner.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_feedback_manager.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\inference_calculator_utils.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\utils.cc">
+      <Filter>source\util\tflite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\tflite\tflite_signature_reader.cc">
+      <Filter>source\util\tflite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\split_vector_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\face_landmarker\tensors_to_face_landmarks_graph.cc">
+      <Filter>source\tasks\cc\vision\face_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\landmarks_refinement_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensors_to_floats_calculator.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\thresholding_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\landmark_letterbox_removal_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\landmark_projection_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\landmark_projection_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\landmarks_to_detection_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\landmarks_to_detection_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\landmarks_to_tensor_calculator.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensors_to_classification_calculator.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\label_map_util.cc">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\util\str_util.cc">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\tensors_to_landmarks_calculator.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\stream_handler\in_order_output_stream_handler.cc">
+      <Filter>source\framework\stream_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\stream_handler\default_input_stream_handler.cc">
+      <Filter>source\framework\stream_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\stream_handler\default_input_stream_handler.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\stream_handler\immediate_input_stream_handler.cc">
+      <Filter>source\framework\stream_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_landmarker\pose_landmarker_graph.cc">
+      <Filter>source\tasks\cc\vision\pose_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_detector\pose_detector_graph.cc">
+      <Filter>source\tasks\cc\vision\pose_detector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\tasks\cc\vision\pose_landmarker\pose_landmarks_detector_graph.cc">
+      <Filter>source\tasks\cc\vision\pose_landmarker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\core\constant_side_packet_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\image\warp_affine_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\tensor\tensors_to_segmentation_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\refine_landmarks_from_heatmap_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\visibility_copy_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\framework\formats\time_series_header.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\api2\stream\smoothing.cc">
+      <Filter>source\framework\api2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\proto-cpp-out\mediapipe\calculators\util\visibility_smoothing_calculator.pb.cc">
+      <Filter>proto-cpp-out</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\detection_letterbox_removal_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\alignment_points_to_rects_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\constant_side_packet_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\core\side_packet_to_stream_calculator.cc">
+      <Filter>source\calculators\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\visibility_smoothing_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\refine_landmarks_from_heatmap_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\visibility_copy_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\util\world_landmark_projection_calculator.cc">
+      <Filter>source\calculators\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\calculators\tensor\image_to_tensor_converter_opencv.cc">
+      <Filter>source\calculators\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mediapipe\framework\formats\image_opencv.cc">
+      <Filter>source\calculators\image</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mediapipe.def">
+      <Filter>build-windows</Filter>
+    </None>
+  </ItemGroup>
+</Project>

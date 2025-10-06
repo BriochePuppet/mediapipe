@@ -34,6 +34,7 @@
 #include "tensorflow/lite/delegates/nnapi/nnapi_delegate.h"
 #endif  // ANDROID
 #include "tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h"
+#include "tensorflow/lite/delegates/gpu/delegate.h"
 
 namespace mediapipe {
 namespace api2 {
@@ -99,6 +100,8 @@ InferenceCalculatorCpuImpl::CreateInferenceRunner(CalculatorContext* cc) {
       &options.input_output_config());
 }
 
+extern "C" unsigned long __stdcall GetEnvironmentVariableW(const wchar_t* lpName, wchar_t* lpBuffer, unsigned long nSize);
+
 absl::StatusOr<TfLiteDelegatePtr>
 InferenceCalculatorCpuImpl::MaybeCreateDelegate(CalculatorContext* cc) {
   const auto& calculator_opts =
@@ -120,8 +123,22 @@ InferenceCalculatorCpuImpl::MaybeCreateDelegate(CalculatorContext* cc) {
   const bool opts_has_delegate =
       calculator_opts.has_delegate() || !kDelegate(cc).IsEmpty();
   if (opts_has_delegate && opts_delegate.has_tflite()) {
-    // Default tflite inference requested - no need to modify graph.
-    return nullptr;
+    wchar_t environment_variable_buffer[2];
+    unsigned long size = GetEnvironmentVariableW(L"TFLITE_FORCE_GPU", environment_variable_buffer, 2U);
+    if ((1U == size || 2U == size) && L'1' == environment_variable_buffer[0])
+    {
+      TfLiteGpuDelegateOptionsV2 gpu_opts = TfLiteGpuDelegateOptionsV2Default();
+      gpu_opts.experimental_flags = TFLITE_GPU_EXPERIMENTAL_FLAGS_NONE;
+
+      return TfLiteDelegatePtr(TfLiteGpuDelegateV2Create(&gpu_opts), &TfLiteGpuDelegateV2Delete);
+    }
+    else
+    {
+      TfLiteXNNPackDelegateOptions xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
+      xnnpack_opts.num_threads = GetXnnpackNumThreads(opts_has_delegate, opts_delegate);
+
+      return TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts), &TfLiteXNNPackDelegateDelete);
+    }
   }
 
 #if defined(MEDIAPIPE_ANDROID)
@@ -152,15 +169,28 @@ InferenceCalculatorCpuImpl::MaybeCreateDelegate(CalculatorContext* cc) {
   const bool use_xnnpack = opts_has_delegate && opts_delegate.has_xnnpack();
 #endif  // defined(__EMSCRIPTEN__)
 
-  if (use_xnnpack) {
-    auto xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
-    xnnpack_opts.num_threads =
-        GetXnnpackNumThreads(opts_has_delegate, opts_delegate);
-    return TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts),
-                             &TfLiteXNNPackDelegateDelete);
+  {
+    wchar_t environment_variable_buffer[2];
+    unsigned long size = GetEnvironmentVariableW(L"TFLITE_FORCE_GPU", environment_variable_buffer, 2U);
+    if ((1U == size || 2U == size) && L'1' == environment_variable_buffer[0])
+    {
+      TfLiteGpuDelegateOptionsV2 gpu_opts = TfLiteGpuDelegateOptionsV2Default();
+      gpu_opts.experimental_flags = TFLITE_GPU_EXPERIMENTAL_FLAGS_NONE;
+
+      return TfLiteDelegatePtr(TfLiteGpuDelegateV2Create(&gpu_opts), &TfLiteGpuDelegateV2Delete);
+    }
+    else
+    {
+      TfLiteXNNPackDelegateOptions xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
+      if (use_xnnpack)
+      {
+        xnnpack_opts.num_threads = GetXnnpackNumThreads(opts_has_delegate, opts_delegate);
+      }
+      return TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts), &TfLiteXNNPackDelegateDelete);
+    }
   }
 
-  return nullptr;
+  // return nullptr;
 }
 
 }  // namespace api2

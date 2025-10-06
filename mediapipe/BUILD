@@ -209,3 +209,23 @@ exports_files(
     ["provisioning_profile.mobileprovision"],
     visibility = ["//visibility:public"],
 )
+
+cc_binary(
+    name = "mediapipe_c",
+    srcs  = select({
+        "@bazel_tools//src/conditions:windows": [
+            "dllmain.cpp",
+            ],
+        "//conditions:default": [],
+    }),
+    deps = [
+        "//mediapipe/tasks/c/vision/face_landmarker:face_landmarker_lib",
+        "//mediapipe/tasks/c/vision/pose_landmarker:pose_landmarker_lib",
+        ],
+    linkshared = 1,
+    win_def_file = select({
+        "@bazel_tools//src/conditions:windows": "mediapipe_c.def",
+        "//conditions:default": None,
+    }),
+    visibility = ["//visibility:public"],
+)

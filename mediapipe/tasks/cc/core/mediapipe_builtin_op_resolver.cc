@@ -48,17 +48,6 @@ MediaPipeBuiltinOpResolver::MediaPipeBuiltinOpResolver() {
       "Landmarks2TransformMatrix",
       mediapipe::tflite_operations::RegisterLandmarksToTransformMatrixV2(),
       /*version=*/2);
-  // For the LanguageDetector model.
-  AddCustom("NGramHash", mediapipe::tflite_operations::Register_NGRAM_HASH());
-  AddCustom("KmeansEmbeddingLookup",
-            mediapipe::tflite_operations::Register_KmeansEmbeddingLookup());
-  // For the UniversalSentenceEncoder model.
-  AddCustom("TFSentencepieceTokenizeOp",
-            mediapipe::tflite_operations::Register_SENTENCEPIECE_TOKENIZER());
-  AddCustom("RaggedTensorToTensor",
-            mediapipe::tflite_operations::Register_RAGGED_TENSOR_TO_TENSOR());
-  AddCustom("FusedBatchNormV3",
-            mediapipe::tflite_operations::Register_FusedBatchNorm());
 }
 
 }  // namespace core

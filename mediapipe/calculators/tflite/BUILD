@@ -208,6 +208,7 @@ cc_library(
         "@com_google_absl//absl/memory",
         "@org_tensorflow//tensorflow/lite:framework",
         "@org_tensorflow//tensorflow/lite/delegates/xnnpack:xnnpack_delegate",
+        "@org_tensorflow//tensorflow/lite/delegates/gpu:delegate",
         "@org_tensorflow//tensorflow/lite/kernels:builtin_ops",
     ] + selects.with_or({
         ":gpu_inference_disabled": [],

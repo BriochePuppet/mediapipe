@@ -30,6 +30,7 @@
 #include "mediapipe/framework/port/ret_check.h"
 #include "mediapipe/framework/port/status_macros.h"
 #include "tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h"
+#include "tensorflow/lite/delegates/gpu/delegate.h"
 
 namespace mediapipe {
 namespace api2 {
@@ -97,6 +98,8 @@ InferenceCalculatorXnnpackImpl::CreateInferenceRunner(CalculatorContext* cc) {
       calculator_opts.delegate().xnnpack().enable_zero_copy_tensor_io());
 }
 
+extern "C" unsigned long __stdcall GetEnvironmentVariableW(const wchar_t* lpName, wchar_t* lpBuffer, unsigned long nSize);
+
 absl::StatusOr<TfLiteDelegatePtr>
 InferenceCalculatorXnnpackImpl::CreateDelegate(CalculatorContext* cc) {
   const auto& calculator_opts =
@@ -116,11 +119,26 @@ InferenceCalculatorXnnpackImpl::CreateDelegate(CalculatorContext* cc) {
   const bool opts_has_delegate =
       calculator_opts.has_delegate() || !kDelegate(cc).IsEmpty();
 
-  auto xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
-  xnnpack_opts.num_threads =
-      GetXnnpackNumThreads(opts_has_delegate, opts_delegate);
-  return TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts),
-                           &TfLiteXNNPackDelegateDelete);
+
+  {
+    wchar_t environment_variable_buffer[2];
+    unsigned long size = GetEnvironmentVariableW(L"TFLITE_FORCE_GPU", environment_variable_buffer, 2U);
+    if ((1U == size || 2U == size) && L'1' == environment_variable_buffer[0])
+    {
+      TfLiteGpuDelegateOptionsV2 gpu_opts = TfLiteGpuDelegateOptionsV2Default();
+      gpu_opts.experimental_flags = TFLITE_GPU_EXPERIMENTAL_FLAGS_NONE;
+
+      return TfLiteDelegatePtr(TfLiteGpuDelegateV2Create(&gpu_opts), &TfLiteGpuDelegateV2Delete);
+    }
+    else
+    {
+      TfLiteXNNPackDelegateOptions xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
+      xnnpack_opts.num_threads = GetXnnpackNumThreads(opts_has_delegate, opts_delegate);
+
+      return TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts), &TfLiteXNNPackDelegateDelete);
+    }
+  }
+
 }
 
 }  // namespace api2

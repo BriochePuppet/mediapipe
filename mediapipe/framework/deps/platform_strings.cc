@@ -26,21 +26,21 @@ std::string FormatLastError() {
     return std::string("(no error reported)");
   }
 
-  LPSTR message_buffer = nullptr;
-  DWORD size = FormatMessage(
+  LPWSTR message_buffer = nullptr;
+  DWORD size = FormatMessageW(
       /*dwFlags=*/(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM |
                    FORMAT_MESSAGE_IGNORE_INSERTS),
       /*lpSource=*/NULL,
       /*dwMessageId=*/message_id,
       /*dwLanguageId=*/MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
-      /*lpBuffer=*/(LPSTR)&message_buffer,
+      /*lpBuffer=*/(LPWSTR)&message_buffer,
       /*nSize=*/0,
       /*Arguments=*/NULL);
   if (size == 0) {
     return "(error while trying to format the error message)";
   }
 
-  std::string message(message_buffer, size);
+  PlatformString message(message_buffer, size);
   LocalFree(message_buffer);
   return NativeToUtf8(message);
 }

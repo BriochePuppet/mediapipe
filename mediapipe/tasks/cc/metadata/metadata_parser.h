@@ -12,24 +12,19 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
-
-#ifndef MEDIAPIPE_TASKS_CC_CORE_MEDIAPIPE_BUILTIN_OP_RESOLVER_H_
-#define MEDIAPIPE_TASKS_CC_CORE_MEDIAPIPE_BUILTIN_OP_RESOLVER_H_
-
-#include "tensorflow/lite/kernels/register.h"
+#ifndef MEDIAPIPE_TASKS_METADATA_METADATA_PARSER_H_
+#define MEDIAPIPE_TASKS_METADATA_METADATA_PARSER_H_
 
 namespace mediapipe {
 namespace tasks {
-namespace core {
-class MediaPipeBuiltinOpResolver
-    : public tflite::ops::builtin::BuiltinOpResolverWithoutDefaultDelegates {
- public:
-  MediaPipeBuiltinOpResolver();
-  MediaPipeBuiltinOpResolver(const MediaPipeBuiltinOpResolver& r) = delete;
-};
+namespace metadata {
 
-}  // namespace core
+// The version of the metadata parser that this metadata versioning library is
+// depending on.
+inline constexpr char kMetadataParserVersion[] = "1.5.0";
+
+}  // namespace metadata
 }  // namespace tasks
 }  // namespace mediapipe
 
-#endif  // MEDIAPIPE_TASKS_CC_CORE_MEDIAPIPE_BUILTIN_OP_RESOLVER_H_
+#endif  // MEDIAPIPE_TASKS_METADATA_METADATA_PARSER_H_

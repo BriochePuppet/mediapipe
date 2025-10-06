@@ -69,6 +69,7 @@
 
 #if !defined(MEDIAPIPE_EDGE_TPU)
 #include "tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h"
+#include "tensorflow/lite/delegates/gpu/delegate.h"
 #endif  // !EDGETPU
 #if defined(MEDIAPIPE_ANDROID)
 #include "tensorflow/lite/delegates/nnapi/nnapi_delegate.h"
@@ -904,6 +905,8 @@ absl::StatusOr<Packet> TfLiteInferenceCalculator::GetModelAsPacket(
                       "Must specify TFLite model as path or loaded model.");
 }
 
+extern "C" unsigned long __stdcall GetEnvironmentVariableW(const wchar_t* lpName, wchar_t* lpBuffer, unsigned long nSize);
+
 absl::Status TfLiteInferenceCalculator::LoadDelegate(CalculatorContext* cc) {
   const auto& calculator_opts =
       cc->Options<mediapipe::TfLiteInferenceCalculatorOptions>();
@@ -945,13 +948,22 @@ absl::Status TfLiteInferenceCalculator::LoadDelegate(CalculatorContext* cc) {
 #endif  // defined(__EMSCRIPTEN__)
 
 #if !defined(MEDIAPIPE_EDGE_TPU)
-    if (use_xnnpack) {
-      auto xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
-      xnnpack_opts.num_threads = GetXnnpackNumThreads(calculator_opts);
-      delegate_ = TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts),
-                                    &TfLiteXNNPackDelegateDelete);
-      RET_CHECK_EQ(interpreter_->ModifyGraphWithDelegate(delegate_.get()),
-                   kTfLiteOk);
+    {
+      wchar_t environment_variable_buffer[2];
+      unsigned long size = GetEnvironmentVariableW(L"TFLITE_FORCE_GPU", environment_variable_buffer, 2U);
+      if ((1U == size || 2U == size) && L'1' == environment_variable_buffer[0])
+      {
+        TfLiteGpuDelegateOptionsV2 gpu_opts = TfLiteGpuDelegateOptionsV2Default();
+        gpu_opts.experimental_flags = TFLITE_GPU_EXPERIMENTAL_FLAGS_NONE;
+        delegate_ = TfLiteDelegatePtr(TfLiteGpuDelegateV2Create(&gpu_opts), &TfLiteGpuDelegateV2Delete);
+      }
+      else
+      {
+        TfLiteXNNPackDelegateOptions xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
+        xnnpack_opts.num_threads = GetXnnpackNumThreads(calculator_opts);
+        delegate_ = TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts), &TfLiteXNNPackDelegateDelete);
+      }
+      RET_CHECK_EQ(interpreter_->ModifyGraphWithDelegate(delegate_.get()), kTfLiteOk);
       return absl::OkStatus();
     }
 #else
