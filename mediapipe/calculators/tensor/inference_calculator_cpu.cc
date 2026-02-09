@@ -34,6 +34,8 @@
 #include "tensorflow/lite/delegates/nnapi/nnapi_delegate.h"
 #endif  // ANDROID
 #include "tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h"
+#include "tensorflow/lite/delegates/gpu/delegate.h"
+#include "internal_tflite.h"
 
 namespace mediapipe {
 namespace api2 {
@@ -120,8 +122,20 @@ InferenceCalculatorCpuImpl::MaybeCreateDelegate(CalculatorContext* cc) {
   const bool opts_has_delegate =
       calculator_opts.has_delegate() || !kDelegate(cc).IsEmpty();
   if (opts_has_delegate && opts_delegate.has_tflite()) {
-    // Default tflite inference requested - no need to modify graph.
-    return nullptr;
+    if (internal_tflite_get_env_force_gpu())
+    {
+      TfLiteGpuDelegateOptionsV2 gpu_opts = TfLiteGpuDelegateOptionsV2Default();
+      gpu_opts.experimental_flags = TFLITE_GPU_EXPERIMENTAL_FLAGS_NONE;
+
+      return TfLiteDelegatePtr(TfLiteGpuDelegateV2Create(&gpu_opts), &TfLiteGpuDelegateV2Delete);
+    }
+    else
+    {
+      TfLiteXNNPackDelegateOptions xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
+      xnnpack_opts.num_threads = GetXnnpackNumThreads(opts_has_delegate, opts_delegate);
+
+      return TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts), &TfLiteXNNPackDelegateDelete);
+    }
   }
 
 #if defined(MEDIAPIPE_ANDROID)
@@ -152,15 +166,26 @@ InferenceCalculatorCpuImpl::MaybeCreateDelegate(CalculatorContext* cc) {
   const bool use_xnnpack = opts_has_delegate && opts_delegate.has_xnnpack();
 #endif  // defined(__EMSCRIPTEN__)
 
-  if (use_xnnpack) {
-    auto xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
-    xnnpack_opts.num_threads =
-        GetXnnpackNumThreads(opts_has_delegate, opts_delegate);
-    return TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts),
-                             &TfLiteXNNPackDelegateDelete);
+  {
+    if (internal_tflite_get_env_force_gpu())
+    {
+      TfLiteGpuDelegateOptionsV2 gpu_opts = TfLiteGpuDelegateOptionsV2Default();
+      gpu_opts.experimental_flags = TFLITE_GPU_EXPERIMENTAL_FLAGS_NONE;
+
+      return TfLiteDelegatePtr(TfLiteGpuDelegateV2Create(&gpu_opts), &TfLiteGpuDelegateV2Delete);
+    }
+    else
+    {
+      TfLiteXNNPackDelegateOptions xnnpack_opts = TfLiteXNNPackDelegateOptionsDefault();
+      if (use_xnnpack)
+      {
+        xnnpack_opts.num_threads = GetXnnpackNumThreads(opts_has_delegate, opts_delegate);
+      }
+      return TfLiteDelegatePtr(TfLiteXNNPackDelegateCreate(&xnnpack_opts), &TfLiteXNNPackDelegateDelete);
+    }
   }
 
-  return nullptr;
+  // return nullptr;
 }
 
 }  // namespace api2

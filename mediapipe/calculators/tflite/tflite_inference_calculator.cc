@@ -904,6 +904,8 @@ absl::StatusOr<Packet> TfLiteInferenceCalculator::GetModelAsPacket(
                       "Must specify TFLite model as path or loaded model.");
 }
 
+#error should NOT be used!
+
 absl::Status TfLiteInferenceCalculator::LoadDelegate(CalculatorContext* cc) {
   const auto& calculator_opts =
       cc->Options<mediapipe::TfLiteInferenceCalculatorOptions>();
